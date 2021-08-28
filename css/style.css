@@ -573,4 +573,9 @@ footer .copyright span{
 		height: 50px;
 		width: auto;
 	}
+	
+	footer .copyright{
+		justify-content: center;
+		margin-top: 5px;
+	}
 }
