@@ -1,0 +1,576 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background: #fff;
+	font-size: 20px;
+	color: #0f0f0f;
+}
+
+/****Utilitis****/
+
+.text-center{
+	text-align: center;
+}
+
+section{
+	padding: 100px;
+
+}
+.container{
+	margin-inline: auto;
+	width: min(90%);
+}
+
+.split{
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+.split > *{
+	flex-basis: 100%;
+}
+
+.split > * + * {
+	margin-left: 1em;
+}
+
+
+/****Typography****/
+
+h1{
+	font-size: 320%;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+h2{
+	font-size: 200%;
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+
+h3 {
+	font-size: 130%;
+	font-weight: 500;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+
+.lead{
+	font-size: 100%;
+	font-weight: 300;
+	line-height: 164.5%;
+	text-transform: capitalize;
+}
+
+p{
+	font-size: 90%;
+	font-weight: 300;
+	line-height: 164.5%;
+	margin-bottom: 40px;
+}
+
+/****Home****/
+
+nav{
+	background: #F2F9F1;
+}
+
+nav .container {
+
+	display: flex;
+	padding: 40px 0;
+	margin-inline: auto;
+	width: min(95%);
+}
+nav .container ul{
+	list-style: none;
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+}
+
+nav .container ul li{
+	margin-left: 40px;
+	font-size: 90%;
+}
+
+nav img{
+	height: 50px;
+	width: auto;
+}
+
+
+
+/****Home****/
+
+#Home {
+    width: auto;
+	padding: 100px;
+    background: url("BGimg/header.jpg") center;
+    background-size: cover;
+	display: flex;
+}
+
+.header{
+	margin-top: 100px;
+}
+
+
+.header span {
+    font-weight: 600;
+    font-size: 40px;
+    color: #636363;
+}
+
+.header .name{
+	font-size: 90px;
+	line-height: 100%;
+	margin: 0 0 0 20px;
+}
+
+.header .title {
+	font-weight: 500;
+    font-size: 26px;
+    color: #808080;
+	display: block;
+	margin: 0 0 0 100px;
+}
+.hire-btn {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 15px 40px;
+    background: #388E3C;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 5px;
+	outline: none;
+    transition: all .4s ease-in-out;
+}
+
+.hire-btn:hover {
+    background: #236125;
+    color: #fff;
+}
+
+#Home ul {
+	list-style: none;
+	margin-top: 100px;
+	padding: 5px 0 0 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+#Home ul li{
+	font-size: 250%;
+	line-height: 100%;
+	display: flex;
+	margin-right: 40px;
+	color: #388E3C;
+	transition: all .4s ease-in-out;
+}
+
+#Home ul li:hover{
+	font-size: 300%;
+	color: #8BC34A;
+}
+
+/****Skils****/
+
+#skils {
+	padding: 50px;
+	background: url(BGimg/Skil.jpg);
+	background-size: cover;
+	color: #fff;
+}
+
+.skil-box{
+	padding: 50px;
+	background: #F2F9F1;
+	border-radius: 30px;
+	margin-top: 80px;
+	color: #0f0f0f;
+	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+	
+}
+
+#skils .skil-box h1,h3,p{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#skils .skil-box h1{
+	color: #388E3C;
+}
+
+#skils .skil-box p{
+	margin-bottom: 40px;
+}
+
+#skils .skil-box .first{
+	border-right: 1px solid #388E3C;
+}
+
+
+#skils .skil-box .skils{
+	padding: 0 20px;
+}
+
+
+
+#skils .skil-box .skils .tool-box .tools p{
+	color: #388E3C;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#skils .skil-box .skils .tool-box .tools ul{
+	list-style: none;
+}
+
+#skils .skil-box .skils .tool-box .tools ul li{
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 90%;
+	font-weight: 300;
+}
+
+/****Projects****/
+
+#project{
+	background: #DDEEDF;
+}
+
+
+#project .container h2,
+#project .container p{
+	text-align: center;
+}
+#project .container p a{
+	text-decoration: none;
+}
+
+#project .container p a span{
+	color: #388E3C;
+	transition: all .4s ease-in-out;
+}
+
+#project .container p a span:hover{
+	text-decoration: underline;
+}
+
+#project .project-showcase{
+	width: 90%;
+	margin: 80px auto 0px auto;
+}
+
+#project .project-showcase .showcase-box{
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+#project .project-showcase .showcase-box img{
+	width: 30%;
+	object-fit: cover;
+	border-radius: 10px;
+	filter: drop-shadow(0px 0px 10px rgba(129, 30, 30, 0.08));
+	transition: all .5s ease-in-out;
+}
+
+#project .project-showcase .showcase-box img:hover {
+	width: 35%;
+	height: 110%;
+	filter: drop-shadow(0px 0px 10px rgba(129, 30, 30, 0.25));
+}
+
+
+
+
+/****Contact****/
+
+#contact{
+	background: #F2F9F1;
+}
+
+.touch h2,
+.touch p,
+.touch .details p {
+	text-align: left;
+}
+
+.touch .details{
+	margin-left: 40px;
+}
+
+.touch .details p i {
+	font-size: 120%;
+	color: #388E3C;
+	margin-right: 20px;
+}
+
+.touch .details p span{
+	margin-left: 35px;
+}
+
+.form{
+	position: relative;
+}
+
+.form-box{
+	position: absolute;
+	top: -65px;
+	height: 628px;
+	width: 628px;
+	padding: 50px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+}
+
+.form-box h2{
+	margin-bottom: 40px;
+
+}
+
+.form-box input,
+.form-box textarea{
+	font-size: 90%;
+	padding: 15px 20px;
+	border: 1px solid #388E3C;
+	border-radius: 5px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+.form-box .submit-btn{
+	background: #388E3C;
+	color: #fff;
+}
+
+.form-box .submit-btn:hover{
+	background: #174e19;
+}
+
+/**Footer***/
+
+footer{
+	background: #388E3C;
+	height: 400px;
+	padding: 100px;
+}
+
+footer p{
+	color: #fff;
+	text-align: left;
+	margin: 20px 0 0 0;
+}
+footer ul {
+	list-style: none;
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+}
+
+footer ul li{
+	font-size: 200%;
+	line-height: 100%;
+	display: flex;
+	margin-right: 40px;
+	color: #fff;
+	transition: all .4s ease-in-out;
+}
+
+footer ul li:hover{
+	font-size: 250%;
+}
+
+footer .copyright{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: -30px;
+}
+
+footer .copyright span{
+	font-weight: 700;
+}
+
+
+@media (max-width: 1007px){
+	body{
+		font-size: 20px;
+	}
+	.container{
+		width: min(95%);
+	}
+	.split{
+		justify-content: space-between;
+	}
+	section{
+		padding: 50px;
+	}
+	footer{
+		padding: 50px;
+	}
+	.card{
+		width: 280px;
+		height: 190px;
+		margin-right: 20px;
+	}
+	#project .project-showcase ul{
+		margin-bottom: 20px;
+	}
+	.form-box{
+		height: 450px;
+		width: 450px;
+		padding: 30px;
+		top: 40px;
+		right: -65px;
+	}
+	.form-box h2{
+		margin-bottom: 20px;
+	}
+	.form-box input,
+	.form-box textarea{
+		padding: 10px 15px;
+	}
+	#skils .skil-box .skils .tool-box .tools p{
+		text-align: left;
+	}
+	#skils .skil-box .skils .tool-box .tools ul li{
+		text-align: left;
+	}
+}
+
+@media (max-width: 640px){
+	body{
+		font-size: 18px;
+	}
+	.container{
+		width: 98%;
+	}
+	.split{
+		flex-direction: column;
+	}
+
+	h1{
+		font-size: 200%;
+	}
+
+
+	nav{
+		display: none;
+	}
+	#Home{
+		padding: 100px 50px 50px 50px;
+	}
+
+	.header .name{
+		font-size: 250%;
+		margin-bottom: 0px;
+		text-align: center;
+
+	}
+	.header{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 0px;
+	}
+
+	.header .hi{
+		font-size: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	.header .title{
+		font-size: 120%;
+		margin: 0;
+		text-align: center;
+	}
+
+	.header .hire-btn{
+		padding: 12px 30px;
+		width: 60%;
+	}
+
+	#Home ul{
+		justify-content: space-around;
+	}
+
+	#Home ul li{
+		margin: 0;
+	}
+
+
+	#skils .skil-box{
+		padding: 30px;
+	}
+
+	#skils .skil-box .first{
+		border-right: none;	
+	}
+
+	#skils .skil-box .skils{
+		width: 100%;
+		margin: 0 0 40px 0;
+		padding: 0;
+	}
+
+	#skils .skil-box .skils .tool-box{
+		justify-content: center;
+		align-items: center;
+	}
+
+	#skils .skil-box .skils .tool-box .tools{
+		margin-bottom: 20px;
+	}
+
+	#skils .skil-box .skils .tool-box .tools p,
+	#skils .skil-box .skils .tool-box .tools ul li{
+		text-align: center;
+	}
+
+
+
+
+	#project .project-showcase .showcase-box{
+		height: 80%;
+		margin-bottom: 20px;
+		flex-direction: column;
+		align-items: center;
+	}
+	#project .project-showcase .showcase-box img {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#project .project-showcase .showcase-box{
+		
+	}
+	.form-box{
+		display: none;
+	}
+
+	footer{
+		padding: 50px;
+		height: auto;
+	}
+
+	footer .container img{
+		height: 50px;
+		width: auto;
+	}
+}
