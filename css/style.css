@@ -74,6 +74,7 @@ p{
 	font-size: 90%;
 	font-weight: 300;
 	line-height: 164.5%;
+	text-transform: capitalize;
 	margin-bottom: 40px;
 }
 
