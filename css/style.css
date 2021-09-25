@@ -123,6 +123,7 @@ nav img{
 
 .header{
 	margin-top: 100px;
+	animation: slidex1 .9s ease;
 }
 
 
@@ -608,4 +609,43 @@ footer .copyright span{
 		justify-content: center;
 		margin-top: 5px;
 	}
+}
+
+
+@keyframes slidex1 {
+	0%{
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+@keyframes slidex2 {
+	0%{
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	50%{
+		opacity: .5;
+		transform: translateX(100px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.animation1{
+	animation: slidex1 .5s ease;
+}
+
+.animation2 {
+	animation: slidex2 .5s ease;
 }
