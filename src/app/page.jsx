@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Services from './components/Services';
-import Portfolio from './Portfolio';
+import Portfolio from './components/Portfolio';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -19,7 +19,7 @@ export default function Home() {
         <Portfolio />
         <Contact />
       </main>
-      <Footer />
+      <Footer darkMode={darkMode} />
     </div>
   );
 }

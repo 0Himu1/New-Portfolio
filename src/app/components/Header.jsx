@@ -37,9 +37,27 @@ export default function Header({ darkMode, setDarkMode }) {
         </p>
       </div>
       <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-        <AiFillGithub />
-        <AiFillLinkedin />
-        <AiFillInstagram />
+        <a
+          href="https://github.com/0Himu1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <AiFillGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kamruzzaman-khondokar/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <AiFillLinkedin />
+        </a>
+        <a
+          href="https://www.instagram.com/himu_nazmul/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <AiFillInstagram />
+        </a>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
-import PortfolioCard from './components/PortfolioCard';
-import data from '../pages/api/deta';
+import PortfolioCard from './PortfolioCard';
+import data from '../../pages/api/deta';
 
 export default function Portfolio() {
   return (

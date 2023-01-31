@@ -16,8 +16,8 @@ export default function PortfolioCard({
         className="rounded-xl mb-3"
       />
       <div className="flex flex-col justify-between">
-        <h3 className="text-3xl font-bold mb-3">{title}</h3>
-        <p className="text-xl font-medium mb-4">{text}</p>
+        <h3 className="text-3xl font-medium mb-3">{title}</h3>
+        <p className="text-lg font-normal mb-4">{text}</p>
         <div className="flex text-3xl mb-4">
           <a
             href={repo}
@@ -31,9 +31,9 @@ export default function PortfolioCard({
             <FiExternalLink />
           </a>
         </div>
-        <div className="flex text-md">
+        <div className="flex">
           {tag.map((t) => (
-            <li className="list-none mr-2">{t}</li>
+            <li className="list-none mr-2 font-light ">{t}</li>
           ))}
         </div>
       </div>

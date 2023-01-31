@@ -55,7 +55,7 @@ export default function Services() {
             height={100}
             className="mx-auto"
           />
-          <h3 className="text-lg font-medium pt-8 pb-2">Beautifull Design</h3>
+          <h3 className="text-lg font-medium pt-8 pb-2">Best Technology</h3>
           <p className="py-2">
             Poppuler Freamwork and libraries for creating the best web
             application today.
