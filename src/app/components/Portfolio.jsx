@@ -8,7 +8,7 @@ export default function Portfolio() {
       <div>
         <h3 className="text-3xl py-1 dark:text-white font-bold">Portfolio</h3>
       </div>
-      <div className="flex flex-col gap-10 py-10 md:flex-row md:flex-wrap">
+      <div className="flex flex-col gap-10 py-10 md:flex-row md:flex-wrap w-full">
         {data.map(({
           image, title, text, repo, link, tag,
         }) => (

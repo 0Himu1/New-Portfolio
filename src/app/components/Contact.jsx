@@ -20,7 +20,7 @@ export default function Contact() {
         </button>
       </div>
       <div className="text-center md:text-right mt-5 md:mt-0 dark:text-white flex-1 w-full p-10">
-        <div className="flex justify-between items-center md:flex-col md:items-start">
+        <div className="justify-between items-center md:flex md:items-start">
           <h3 className="text-2xl font-medium text-gray-800 dark:text-white">
             Email
           </h3>
@@ -30,7 +30,7 @@ export default function Contact() {
             <span className="font-thin">(Recommended)</span>
           </p>
         </div>
-        <div className="flex justify-between items-center md:flex-col md:items-start">
+        <div className="justify-between items-center md:flex md:items-start">
           <h3 className="text-2xl font-medium text-gray-800 dark:text-white">
             Skype
           </h3>
@@ -40,7 +40,7 @@ export default function Contact() {
             <span className="font-thin">(Always Available)</span>
           </p>
         </div>
-        <div className="flex justify-between items-center md:flex-col  md:items-start">
+        <div className="justify-between items-center md:flex md:items-start">
           <h3 className="text-2xl font-medium text-gray-800 dark:text-white">
             Instagram
           </h3>
@@ -48,7 +48,7 @@ export default function Contact() {
             @himu_nazmul
           </p>
         </div>
-        <div className="flex justify-between items-start md:flex-col md:items-start">
+        <div className="justify-between items-start md:flex md:items-start">
           <h3 className="text-2xl font-medium text-gray-800 dark:text-white">
             Address
           </h3>
