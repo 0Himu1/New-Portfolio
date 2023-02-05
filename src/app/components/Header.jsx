@@ -26,13 +26,13 @@ export default function Header({ darkMode, setDarkMode }) {
       </nav>
       <div className="my-auto">
         <div className="text-center p-10 ">
-          <h2 className="text-5xl py-2 mt-10 lg:mb-5 text-teal-600 font-medium dark:text-teal-400 md:text-6xl xl:mt-20  xl:text-8xl">
+          <h2 className="text-5xl py-2 mt-10 2xl:mb-5 text-teal-600 font-medium dark:text-teal-400 md:text-6xl xl:mt-20  2xl:text-8xl">
             Himu Nazmul
           </h2>
-          <h3 className="text-3xl py2 md:text-3xl dark:text-white xl:text-5xl">
+          <h3 className="text-3xl py2 md:text-3xl dark:text-white 2xl:text-5xl">
             Developer and Designer
           </h3>
-          <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 md:text-xl max-w-xl mx-auto xl:text-2xl">
+          <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 md:text-xl max-w-xl mx-auto 2xl:text-2xl">
             Freelancher providing services for Front-end Development and
             Graphice Design.
           </p>
