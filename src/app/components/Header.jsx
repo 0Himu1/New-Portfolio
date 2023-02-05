@@ -24,40 +24,42 @@ export default function Header({ darkMode, setDarkMode }) {
           </li>
         </ul>
       </nav>
-      <div className="text-center p-10 ">
-        <h2 className="text-5xl py-2 mt-10 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
-          Himu Nazmul
-        </h2>
-        <h3 className="text-3xl py2 md:text-3xl dark:text-white">
-          Developer and Designer
-        </h3>
-        <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 md:text-xl max-w-xl mx-auto">
-          Freelancher providing services for Front-end Development and Graphice
-          Design.
-        </p>
-      </div>
-      <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-        <a
-          href="https://github.com/0Himu1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <AiFillGithub />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/kamruzzaman-khondokar/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <AiFillLinkedin />
-        </a>
-        <a
-          href="https://www.instagram.com/himu_nazmul/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <AiFillInstagram />
-        </a>
+      <div className="my-auto">
+        <div className="text-center p-10 ">
+          <h2 className="text-5xl py-2 mt-10 lg:mb-5 text-teal-600 font-medium dark:text-teal-400 md:text-6xl xl:mt-20  xl:text-8xl">
+            Himu Nazmul
+          </h2>
+          <h3 className="text-3xl py2 md:text-3xl dark:text-white xl:text-5xl">
+            Developer and Designer
+          </h3>
+          <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 md:text-xl max-w-xl mx-auto xl:text-2xl">
+            Freelancher providing services for Front-end Development and
+            Graphice Design.
+          </p>
+        </div>
+        <div className="text-5xl lg:text-7xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+          <a
+            href="https://github.com/0Himu1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiFillGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kamruzzaman-khondokar/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiFillLinkedin />
+          </a>
+          <a
+            href="https://www.instagram.com/himu_nazmul/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiFillInstagram />
+          </a>
+        </div>
       </div>
     </section>
   );

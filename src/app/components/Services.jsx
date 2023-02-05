@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Image from 'next/image';
 
@@ -13,13 +14,19 @@ export default function Services() {
           Services I offer
         </h3>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-          I have Served As A
-          <span className="text-teal-500"> Graphic Designer </span>
-          In Multiple Small Businesses & Volunteer Organizations. I Do
-          <span className="text-teal-500"> Web Development </span>
-          As A Freelancer. I am Quietly Confident, Naturally Curious, And
-          Perpetually Working For Improving My Chops One Design Problem At A
-          Time.
+          Expert front-end developer skilled in
+          <span className="text-teal-500"> React </span>
+          ,
+          <span className="text-teal-500"> Javascript </span>
+          , and
+          {' '}
+          <span className="text-teal-500"> Tailwind </span>
+          . Building visually
+          appealing and user-friendly websites and applications with a passion.
+          Striving for excellence in technical skills, client service, and
+          project delivery. My goal is to provide top-notch results, on time and
+          within budget, using the latest technologies such as React,
+          Javascript, and Tailwind. Let's create something great together.
         </p>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
           Design And Code Beautifully Simple Things, And I Love What I Do.

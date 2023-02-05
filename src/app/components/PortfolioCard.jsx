@@ -7,7 +7,7 @@ export default function PortfolioCard({
   image, title, text, repo, link, tag,
 }) {
   return (
-    <div className="basis-1/3 flex-1 p-5 h-auto w-80 shadow-lg rounded-xl text-gray-800 dark:bg-gray-700 dark:text-white lg:basis-1/4 mx-auto">
+    <div className="basis-1/3 flex-1 p-5 h-auto w-80 shadow-lg rounded-xl text-gray-800 dark:bg-gray-700 dark:text-white lg:basis-1/4 mx-auto hover:drop-shadow-xl hover:shadow-gray-600">
       <Image
         src={image}
         width="100%"
