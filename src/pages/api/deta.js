@@ -9,8 +9,8 @@ const data = [
   {
     title: 'Tic Tac Toe',
     text: 'A fun project using React class component',
-    repo: 'https://github.com/0Himu1/tic-tac-toe',
-    link: 'https://broken-tic-tac-toe.netlify.app/',
+    repo: 'https://github.com/0Himu1/next-firebase-todo',
+    link: 'https://firebase-next-todo.netlify.app/',
     tag: ['JavaScript', 'React', 'CSS Grid'],
     image: ticTacToe,
   },
