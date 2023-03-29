@@ -68,11 +68,12 @@ export default function Services() {
             application today.
           </p>
           <h4 className="py-4 text-teal-600">Freamwork & Libraries</h4>
+          <p className="text-gray-800 py-1 dark:text-white">Next js</p>
           <p className="text-gray-800 py-1 dark:text-white">React</p>
           <p className="text-gray-800 py-1 dark:text-white">Tailwind</p>
           <p className="text-gray-800 py-1 dark:text-white">Styled Component</p>
           <p className="text-gray-800 py-1 dark:text-white">React Hook</p>
-          <p className="text-gray-800 py-1 dark:text-white">Bootstrap</p>
+          <p className="text-gray-800 py-1 dark:text-white">Strapi</p>
         </div>
       </div>
     </section>
