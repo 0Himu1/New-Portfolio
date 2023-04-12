@@ -27,7 +27,7 @@ const data = [
     text: 'Generate random useful advice for fun.',
     repo: 'https://github.com/0Himu1/advise-generator',
     link: 'https://advisegenerator.netlify.app/',
-    tag: ['JavaScript', 'React', 'API'],
+    tag: ['JavaScript', 'React', 'Nextjs', 'Strapi', 'API'],
     image: advise,
   },
   {
@@ -41,8 +41,8 @@ const data = [
   {
     title: 'Nike Promo',
     text: 'E-commerce page design using HTML & CSS',
-    repo: 'https://github.com/0Himu1/Nike-Promo-Page',
-    link: 'https://0himu1.github.io/Nike-Promo-Page/',
+    repo: 'https://github.com/0Himu1/nike-store-frontend',
+    link: 'https://nike-mimic.vercel.app/',
     tag: ['HTML', 'CSS'],
     image: nike,
   },
