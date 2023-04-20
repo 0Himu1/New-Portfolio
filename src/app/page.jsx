@@ -1,8 +1,10 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/no-unescaped-entities */
 
 'use client';
 
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -14,6 +16,7 @@ export default function Home() {
   return (
     <div className={darkMode ? 'dark' : ''}>
       <main className="bg-white px-10 dark:bg-gray-900 md:px-20 lg-px-40">
+        <Analytics />
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <Services />
         <Portfolio />
