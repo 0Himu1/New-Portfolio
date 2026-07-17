@@ -287,29 +287,67 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid gap-3">
-              <a
-                className="contact-link"
-                href={`mailto:${portfolio.personal.contact.email}`}
-                onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "email", location: "contact_section" })}
+            <div className="grid gap-4">
+              <form
+                className="contact-form"
+                action="https://formsubmit.co/contact.kknazmul@gmail.com"
+                method="POST"
+                onSubmit={() => capturePortfolioEvent("contact_form_submitted", { location: "contact_section" })}
               >
-                <Mail size={17} />
-                <span>
-                  <strong>Email</strong>
-                  {portfolio.personal.contact.email}
-                </span>
-              </a>
-              <a
-                className="contact-link"
-                href={`tel:${portfolio.personal.contact.phone.replace(/\s+/g, "")}`}
-                onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "phone", location: "contact_section" })}
-              >
-                <Phone size={17} />
-                <span>
-                  <strong>Phone</strong>
-                  {portfolio.personal.contact.phone}
-                </span>
-              </a>
+                <input type="hidden" name="_subject" value="New portfolio inquiry" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+                <label>
+                  <span>Name</span>
+                  <input name="name" type="text" placeholder="Your name" required />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input name="email" type="email" placeholder="you@example.com" required />
+                </label>
+                <label>
+                  <span>Project type</span>
+                  <select name="project_type" defaultValue="Full-stack application" required>
+                    <option>Full-stack application</option>
+                    <option>Dashboard or internal tool</option>
+                    <option>Website or landing page</option>
+                    <option>Technical consultation</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Message</span>
+                  <textarea name="message" placeholder="Tell me what you want to build." rows={5} required />
+                </label>
+                <button type="submit">
+                  Send message
+                  <Send size={16} />
+                </button>
+              </form>
+
+              <div className="grid gap-3">
+                <a
+                  className="contact-link"
+                  href={`mailto:${portfolio.personal.contact.email}`}
+                  onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "email", location: "contact_section" })}
+                >
+                  <Mail size={17} />
+                  <span>
+                    <strong>Email</strong>
+                    {portfolio.personal.contact.email}
+                  </span>
+                </a>
+                <a
+                  className="contact-link"
+                  href={`tel:${portfolio.personal.contact.phone.replace(/\s+/g, "")}`}
+                  onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "phone", location: "contact_section" })}
+                >
+                  <Phone size={17} />
+                  <span>
+                    <strong>Phone</strong>
+                    {portfolio.personal.contact.phone}
+                  </span>
+                </a>
+              </div>
             </div>
           </section>
         </SectionShell>
