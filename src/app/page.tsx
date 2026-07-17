@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Code2, Cpu, Mail, MapPin, Phone, RadioTower, Send, Terminal } from "lucide-react";
+import { ArrowUpRight, Code2, Cpu, Mail, MessageCircle, MapPin, Phone, RadioTower, Send, Terminal } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { capturePortfolioEvent } from "@/lib/analytics";
 
@@ -74,6 +74,7 @@ const fadeUp = {
 
 export default function Home() {
   const currentRole = portfolio.experience[0];
+  const cleanPhoneNumber = portfolio.personal.contact.phone.replace(/\D/g, "");
 
   return (
     <main className="site-shell min-h-screen overflow-hidden text-zinc-200">
@@ -285,48 +286,10 @@ export default function Home() {
               <p className="mt-5 max-w-2xl text-sm leading-7 text-zinc-500">
                 Based in Bangladesh (UTC+6). Currently working from {portfolio.personal.location} and focused on remote-friendly full-stack work.
               </p>
-            </div>
 
-            <div className="grid gap-4">
-              <form
-                className="contact-form"
-                action="https://formsubmit.co/contact.kknazmul@gmail.com"
-                method="POST"
-                onSubmit={() => capturePortfolioEvent("contact_form_submitted", { location: "contact_section" })}
-              >
-                <input type="hidden" name="_subject" value="New portfolio inquiry" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
-                <label>
-                  <span>Name</span>
-                  <input name="name" type="text" placeholder="Your name" required />
-                </label>
-                <label>
-                  <span>Email</span>
-                  <input name="email" type="email" placeholder="you@example.com" required />
-                </label>
-                <label>
-                  <span>Project type</span>
-                  <select name="project_type" defaultValue="Full-stack application" required>
-                    <option>Full-stack application</option>
-                    <option>Dashboard or internal tool</option>
-                    <option>Website or landing page</option>
-                    <option>Technical consultation</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Message</span>
-                  <textarea name="message" placeholder="Tell me what you want to build." rows={5} required />
-                </label>
-                <button type="submit">
-                  Send message
-                  <Send size={16} />
-                </button>
-              </form>
-
-              <div className="grid gap-3">
+              <div className="contact-actions">
                 <a
-                  className="contact-link"
+                  className="contact-action"
                   href={`mailto:${portfolio.personal.contact.email}`}
                   onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "email", location: "contact_section" })}
                 >
@@ -337,18 +300,67 @@ export default function Home() {
                   </span>
                 </a>
                 <a
-                  className="contact-link"
-                  href={`tel:${portfolio.personal.contact.phone.replace(/\s+/g, "")}`}
+                  className="contact-action"
+                  href={`tel:${cleanPhoneNumber}`}
                   onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "phone", location: "contact_section" })}
                 >
                   <Phone size={17} />
                   <span>
-                    <strong>Phone</strong>
+                    <strong>Call</strong>
+                    {portfolio.personal.contact.phone}
+                  </span>
+                </a>
+                <a
+                  className="contact-action"
+                  href={`https://wa.me/${cleanPhoneNumber}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "whatsapp", location: "contact_section" })}
+                >
+                  <MessageCircle size={17} />
+                  <span>
+                    <strong>WhatsApp</strong>
                     {portfolio.personal.contact.phone}
                   </span>
                 </a>
               </div>
             </div>
+
+            <form
+              className="contact-form"
+              action="https://formsubmit.co/contact.kknazmul@gmail.com"
+              method="POST"
+              onSubmit={() => capturePortfolioEvent("contact_form_submitted", { location: "contact_section" })}
+            >
+              <input type="hidden" name="_subject" value="New portfolio inquiry" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                <span>Project type</span>
+                <select name="project_type" defaultValue="Full-stack application" required>
+                  <option>Full-stack application</option>
+                  <option>Dashboard or internal tool</option>
+                  <option>Website or landing page</option>
+                  <option>Technical consultation</option>
+                </select>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" placeholder="Tell me what you want to build." rows={5} required />
+              </label>
+              <button type="submit">
+                Send message
+                <Send size={16} />
+              </button>
+            </form>
           </section>
         </SectionShell>
 
