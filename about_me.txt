@@ -1,0 +1,101 @@
+{
+  "identity": {
+    "legal_name": "MD Kamruzzaman Khandakar",
+    "professional_alias": "Supto Kumar Bala",
+    "location": "Gazipur, Dhaka Division, BD",
+    "office": "Tejgaon, Dhaka",
+    "education": [
+      { "credential": "SSC", "location": "Gazipur", "date": "2016-02" },
+      { "credential": "Diploma in Electrical Technology", "location": "Chattak", "date": "2021-01" }
+    ],
+    "relationship_status": "In a romantic relationship",
+    "personal_interests": ["CNC fabrication", "furniture design", "Fusion 360", "G-code", "cinematic portrait photography", "Makoto Shinkai's anime visual style"]
+  },
+  "career": [
+    { "date": "2021-09", "role": "Web Designer", "org": "Freelance IT Lab (Mymensingh)", "focus": "HTML/CSS templates, brand alignment" },
+    { "date": "2022-12", "role": "Web Developer", "org": "Inspire IT Academy (Remote)", "focus": "WordPress, React, Meta Pixel tracking" },
+    { "date": "2023-12", "role": "Web Developer / Team Lead", "org": "unspecified", "focus": "Full-stack React/Node.js, client ROI" },
+    { "date": "2024-06 to 2026-06", "role": "Full-Stack Developer", "org": "Solution Provider (Tejgaon, Dhaka)", "focus": "System architecture, team supervision" },
+    { "date": "2026-06 onward", "role": "Co-founder", "org": "GrowB (digital marketing agency)", "focus": "Founded with two former colleagues" }
+  ],
+  "skills": {
+    "stack": ["MERN (MongoDB, Express, React, Node.js)", "Next.js", "TypeScript", "PHP", "Socket.io", "AWS", "Docker"],
+    "technical_preferences": ["OOP", "reusable npm packages", "DSN factory patterns"]
+  },
+  "digital_marketing_experience": [
+    {
+      "client": "360 Engineering & Consultancy",
+      "scope": "Full Meta Ads funnel: strategy, video views to lead gen, creative iteration, daily CSV analysis",
+      "timeframe": "~April-June 2026",
+      "results": "112 leads in 6 weeks on ৳32,000 budget",
+      "top_creative": "Hook Static 2 - Copy (~60% of leads)",
+      "deliverables": ["case study markdown", "lead analytics HTML dashboard"],
+      "status": "Held in reserve pending client permission to publish"
+    },
+    {
+      "client": "Saltika",
+      "industry": "Organic food store",
+      "scope": "Full marketing: strategy through campaign delivery and results",
+      "results": "not yet documented"
+    },
+    {
+      "client": "Solution Provider",
+      "industry": "Interior design company",
+      "scope": "Full marketing: strategy through campaign delivery and results",
+      "results": "not yet documented",
+      "note": "Same name as prior full-stack dev employer — verify if same or distinct entity"
+    }
+  ],
+  "active_projects": [
+    {
+      "name": "Visa Lab",
+      "type": "Labour visa services (Saudi Arabia placements)",
+      "role": "Full ownership of digital marketing",
+      "brand": { "colors": ["#2DBA6E Lab Green", "#1C1C1C Ink Black"], "accents": ["mint", "linen"] },
+      "status": "FB page, logo, poster done; icon undecided (door vs briefcase vs compass)"
+    },
+    {
+      "name": "GrowB Agency",
+      "role": "Co-founder",
+      "brand": { "colors": ["#E84E0F burnt orange", "dark charcoal"] },
+      "stack": "Next.js 14, Tailwind CSS, Framer Motion, bilingual EN/BN",
+      "workflow": "Google Stitch to Figma to Claude Code",
+      "status": "PRD complete"
+    },
+    {
+      "name": "Personal portfolio (himunazmul.vercel.app)",
+      "goal": "Reposition from freelance frontend dev to Full-Stack Developer/system thinker",
+      "target_audience": "CTOs, tech leads, remote international employers",
+      "design_reference": ["Linear.app", "Vercel"]
+    },
+    {
+      "name": "ASH (jersey brand)",
+      "context": "Timed to FIFA World Cup 2026",
+      "deliverables": ["logo", "FB cover", "poster prompts"]
+    },
+    {
+      "name": "ASH (shoe brand)",
+      "deliverable": "E-commerce agent prompt, Neo-Brutalism design system, 45 wholesale products typed in TypeScript"
+    }
+  ],
+  "past_projects": [
+    { "name": "Cabinet Configurator", "date": "2025-11", "description": "Automated board cutting plans, CNC-ready G-code" },
+    { "name": "Letterhead Maker", "date": "2026-03", "description": "Next.js + Google Fonts PDF letterhead generation" },
+    { "name": "Machine Control App", "description": "Monitor and control physical machine operations" },
+    { "name": "Etel (etel.com.bd)", "description": "Niche e-commerce platform for BD mobile parts/repair", "stack": "Next.js 14, Supabase, Tailwind, Shadcn/ui, SSLCommerz/ShurjoPay, Pathao/Redx" },
+    { "name": "HRM SaaS", "description": "Conversational AI HRM product for BD market using Claude API RAG" },
+    { "name": "SwiftPath International", "description": "Brand concept for overseas manpower recruitment agency (navy/gold palette)" }
+  ],
+  "style_and_preferences": {
+    "design_aesthetic": "Premium dark-mode, minimal, high-contrast",
+    "design_references": ["Linear.app", "Vercel", "Makoto Shinkai"],
+    "communication_style": "Clear, concise, result-driven",
+    "working_style": "Iterates frequently, high standards, prefers control over outcomes, combines analytical thinking with creativity",
+    "leadership": "Leadership/ownership role across ventures"
+  },
+  "known_gaps": [
+    "Job search: applying daily, no callbacks yet; attributes it to market + interview confidence gap",
+    "Self-identified over-reliance on AI tools has eroded independent coding ability; plans to return to Leetcode without AI",
+    "Procrastination is a self-identified persistent pattern"
+  ]
+}
