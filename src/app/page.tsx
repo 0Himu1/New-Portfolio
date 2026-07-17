@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Cpu, Github, Mail, MapPin, Phone, RadioTower, Send, Terminal } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
+import { capturePortfolioEvent } from "@/lib/analytics";
 
 const navItems = [
   { label: "systems", href: "#systems" },
@@ -86,7 +87,12 @@ export default function Home() {
           </a>
           <nav className="hidden items-center gap-7 sm:flex" aria-label="Primary navigation">
             {navItems.map((item) => (
-              <a key={item.href} className="transition hover:text-emerald-300" href={item.href}>
+              <a
+                key={item.href}
+                className="transition hover:text-emerald-300"
+                href={item.href}
+                onClick={() => capturePortfolioEvent("nav_link_clicked", { label: item.label, target: item.href })}
+              >
                 {item.label}
               </a>
             ))}
@@ -95,6 +101,7 @@ export default function Home() {
             aria-label="Email Kamruzzaman"
             className="grid size-8 place-items-center rounded-full border border-zinc-800 bg-black/30 text-zinc-400 transition hover:border-emerald-400/50 hover:text-emerald-300"
             href={`mailto:${portfolio.personal.contact.email}`}
+            onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "email", location: "header" })}
           >
             <Mail size={15} />
           </a>
@@ -117,11 +124,19 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a className="action-button primary" href="#projects">
+              <a
+                className="action-button primary"
+                href="#projects"
+                onClick={() => capturePortfolioEvent("hero_cta_clicked", { cta: "view_projects" })}
+              >
                 view_projects
                 <ArrowUpRight size={15} />
               </a>
-              <a className="action-button" href="#contact">
+              <a
+                className="action-button"
+                href="#contact"
+                onClick={() => capturePortfolioEvent("hero_cta_clicked", { cta: "get_in_touch" })}
+              >
                 get_in_touch
               </a>
             </div>
@@ -265,21 +280,35 @@ export default function Home() {
             </div>
 
             <div className="grid gap-3">
-              <a className="contact-link" href={`mailto:${portfolio.personal.contact.email}`}>
+              <a
+                className="contact-link"
+                href={`mailto:${portfolio.personal.contact.email}`}
+                onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "email", location: "contact_section" })}
+              >
                 <Mail size={17} />
                 <span>
                   <strong>Email</strong>
                   {portfolio.personal.contact.email}
                 </span>
               </a>
-              <a className="contact-link" href={`tel:${portfolio.personal.contact.phone.replace(/\s+/g, "")}`}>
+              <a
+                className="contact-link"
+                href={`tel:${portfolio.personal.contact.phone.replace(/\s+/g, "")}`}
+                onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "phone", location: "contact_section" })}
+              >
                 <Phone size={17} />
                 <span>
                   <strong>Phone</strong>
                   {portfolio.personal.contact.phone}
                 </span>
               </a>
-              <a className="contact-link" href="https://himunazmul.vercel.app/" target="_blank" rel="noreferrer">
+              <a
+                className="contact-link"
+                href="https://himunazmul.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => capturePortfolioEvent("external_link_clicked", { label: "current_portfolio", location: "contact_section" })}
+              >
                 <Github size={17} />
                 <span>
                   <strong>Current portfolio</strong>
@@ -336,6 +365,10 @@ function InteractiveTerminal() {
     if (!command) {
       return;
     }
+
+    capturePortfolioEvent("terminal_command_submitted", {
+      command: terminalCommandNames.includes(command) ? command : "unknown"
+    });
 
     if (command === "clear") {
       setLines([
