@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Cpu, Github, Mail, MapPin, Phone, RadioTower, Send, Terminal } from "lucide-react";
+import { ArrowUpRight, Code2, Cpu, Github, Mail, MapPin, Phone, RadioTower, Send, Terminal } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { capturePortfolioEvent } from "@/lib/analytics";
 
@@ -81,15 +81,23 @@ export default function Home() {
       <div className="pointer-events-none fixed inset-x-0 top-0 h-[48rem] bg-[radial-gradient(circle_at_22%_10%,rgba(11,134,104,0.22),transparent_27%),radial-gradient(circle_at_64%_16%,rgba(83,65,139,0.32),transparent_32%),radial-gradient(circle_at_92%_12%,rgba(245,158,11,0.08),transparent_24%)]" />
 
       <div className="relative mx-auto min-h-screen w-full max-w-[1540px] px-5 py-6 sm:px-8 xl:px-12">
-        <header className="flex items-center justify-between text-[12px] text-zinc-500">
-          <a href="#top" className="font-semibold tracking-tight text-zinc-100">
-            Kamruzzaman Khondokar
+        <header className="flex items-center justify-between gap-4 rounded-full border border-zinc-800/80 bg-black/30 px-3 py-3 text-sm text-zinc-400 shadow-[0_18px_70px_rgba(0,0,0,0.28)] backdrop-blur">
+          <a
+            href="#top"
+            className="group grid size-12 shrink-0 place-items-center rounded-full border border-emerald-400/20 bg-zinc-950 text-emerald-300 transition hover:border-emerald-300/50 hover:bg-emerald-400/10"
+            aria-label="Himu Nazmul home"
+            onClick={() => capturePortfolioEvent("nav_link_clicked", { label: "brand_mark", target: "#top" })}
+          >
+            <span className="relative grid size-8 place-items-center rounded-xl border border-zinc-800 bg-zinc-900/90">
+              <Code2 size={20} strokeWidth={2.2} />
+              <span className="absolute -right-1 -top-1 size-2.5 rounded-full bg-amber-300 shadow-[0_0_18px_rgba(251,191,36,0.85)]" />
+            </span>
           </a>
-          <nav className="hidden items-center gap-7 sm:flex" aria-label="Primary navigation">
+          <nav className="hidden items-center gap-1 rounded-full border border-zinc-800/80 bg-zinc-950/70 p-1.5 sm:flex" aria-label="Primary navigation">
             {navItems.map((item) => (
               <a
                 key={item.href}
-                className="transition hover:text-emerald-300"
+                className="rounded-full px-4 py-2.5 font-medium text-zinc-300 transition hover:bg-zinc-800/80 hover:text-emerald-300"
                 href={item.href}
                 onClick={() => capturePortfolioEvent("nav_link_clicked", { label: item.label, target: item.href })}
               >
@@ -99,11 +107,11 @@ export default function Home() {
           </nav>
           <a
             aria-label="Email Kamruzzaman"
-            className="grid size-8 place-items-center rounded-full border border-zinc-800 bg-black/30 text-zinc-400 transition hover:border-emerald-400/50 hover:text-emerald-300"
+            className="grid size-12 shrink-0 place-items-center rounded-full border border-zinc-800 bg-zinc-950/80 text-zinc-300 transition hover:border-emerald-400/50 hover:bg-emerald-400/10 hover:text-emerald-300"
             href={`mailto:${portfolio.personal.contact.email}`}
             onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "email", location: "header" })}
           >
-            <Mail size={15} />
+            <Mail size={18} />
           </a>
         </header>
 
