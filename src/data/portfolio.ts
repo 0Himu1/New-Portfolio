@@ -106,34 +106,34 @@ export const portfolio: PortfolioData = {
   },
   projects: [
     {
-      name: "Cabinet Configurator",
+      name: "CutPlan Studio",
       date: "2025-11",
       description:
         "Web platform for automated board cutting plans and CNC-ready G-code generation, connecting digital design to physical fabrication.",
       tags: ["CNC", "Fusion 360", "G-code", "Fabrication tooling"]
     },
     {
-      name: "Letterhead Maker",
+      name: "BrandPaper",
       date: "2026-03",
       description:
         "Headless design tool built with Next.js and Google Fonts that generates branded, print-ready PDF letterheads.",
       tags: ["Next.js", "PDF generation", "Google Fonts"]
     },
     {
-      name: "Machine Control App",
+      name: "FactoryOps Console",
       date: null,
       description: "Full-stack application to monitor and control physical machine operations in production at Solution Provider.",
       tags: ["Full-stack", "IoT/hardware bridge", "Production system"]
     },
     {
-      name: "Etel",
+      name: "PartsHub",
       date: null,
       description:
         "Niche e-commerce platform concept for Bangladesh mobile phone parts and repair (etel.com.bd), including competitive analysis and technical architecture.",
       tags: ["Next.js 14", "Supabase", "Tailwind", "Shadcn/ui", "E-commerce"]
     },
     {
-      name: "ASH Shoe E-commerce",
+      name: "SneakerShop",
       date: null,
       description:
         "E-commerce build for a Neo-Brutalism-styled sneaker brand, covering 45 wholesale products with a full React/TypeScript/Redux stack.",

@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Code2, Cpu, Github, Mail, MapPin, Phone, RadioTower, Send, Terminal } from "lucide-react";
+import { ArrowUpRight, Code2, Cpu, Mail, MapPin, Phone, RadioTower, Send, Terminal } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { capturePortfolioEvent } from "@/lib/analytics";
 
@@ -35,7 +35,7 @@ const systemGroups = [
 const featuredProjects = [
   ...portfolio.projects.slice(0, 5),
   {
-    name: "HRM SaaS",
+    name: "PeopleDesk AI",
     date: "2026",
     description: "Conversational HRM product concept for the Bangladesh market using Claude API, RAG workflows, and role-based business operations.",
     tags: ["SaaS", "AI workflow", "RAG", "Product architecture"]
@@ -308,19 +308,6 @@ export default function Home() {
                 <span>
                   <strong>Phone</strong>
                   {portfolio.personal.contact.phone}
-                </span>
-              </a>
-              <a
-                className="contact-link"
-                href="https://himunazmul.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => capturePortfolioEvent("external_link_clicked", { label: "current_portfolio", location: "contact_section" })}
-              >
-                <Github size={17} />
-                <span>
-                  <strong>Current portfolio</strong>
-                  himunazmul.vercel.app
                 </span>
               </a>
             </div>
