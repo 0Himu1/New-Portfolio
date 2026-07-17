@@ -515,7 +515,6 @@ a:focus-visible {
 }
 
 .contact-form input,
-.contact-form select,
 .contact-form textarea {
   width: 100%;
   border-radius: 8px;
@@ -538,34 +537,109 @@ a:focus-visible {
   line-height: 1.6;
 }
 
-.contact-form select {
-  appearance: none;
-  background-image:
-    linear-gradient(45deg, transparent 50%, #71717a 50%),
-    linear-gradient(135deg, #71717a 50%, transparent 50%);
-  background-position:
-    calc(100% - 18px) 50%,
-    calc(100% - 13px) 50%;
-  background-size:
-    5px 5px,
-    5px 5px;
-  background-repeat: no-repeat;
-}
-
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #52525b;
 }
 
 .contact-form input:focus,
-.contact-form select:focus,
 .contact-form textarea:focus {
   border-color: rgba(110, 231, 183, 0.5);
   background: rgba(3, 7, 18, 0.5);
   box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.08);
 }
 
-.contact-form button {
+.custom-select {
+  position: relative;
+}
+
+.custom-select > button {
+  position: relative;
+  width: 100%;
+  min-height: 48px;
+  border-radius: 8px;
+  border: 1px solid rgba(63, 63, 70, 0.74);
+  background: rgba(0, 0, 0, 0.26);
+  color: #e4e4e7;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  outline: 0;
+  padding: 0.78rem 2.6rem 0.78rem 0.86rem;
+  text-align: left;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.custom-select > button::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  width: 0.52rem;
+  height: 0.52rem;
+  border-bottom: 1.5px solid #71717a;
+  border-right: 1.5px solid #71717a;
+  transform: translateY(-65%) rotate(45deg);
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.custom-select > button[aria-expanded="true"],
+.custom-select > button:focus-visible {
+  border-color: rgba(110, 231, 183, 0.5);
+  background: rgba(3, 7, 18, 0.5);
+  box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.08);
+}
+
+.custom-select > button[aria-expanded="true"]::after {
+  border-color: #6ee7b7;
+  transform: translateY(-35%) rotate(225deg);
+}
+
+.custom-select-menu {
+  position: absolute;
+  z-index: 30;
+  inset-inline: 0;
+  top: calc(100% + 0.4rem);
+  display: grid;
+  gap: 0.25rem;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(110, 231, 183, 0.24);
+  background:
+    linear-gradient(180deg, rgba(24, 24, 27, 0.98), rgba(5, 5, 5, 0.98)),
+    #080809;
+  padding: 0.35rem;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.46);
+}
+
+.custom-select-menu button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #a1a1aa;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 0.72rem;
+  text-align: left;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.custom-select-menu button:hover,
+.custom-select-menu button[aria-selected="true"] {
+  background: rgba(110, 231, 183, 0.12);
+  color: #f4f4f5;
+}
+
+.contact-form > button {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
@@ -582,7 +656,7 @@ a:focus-visible {
     transform 180ms ease;
 }
 
-.contact-form button:hover {
+.contact-form > button:hover {
   background: #f4f4f5;
   color: #050505;
   transform: translateY(-1px);

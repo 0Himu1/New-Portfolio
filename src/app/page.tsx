@@ -13,6 +13,13 @@ const navItems = [
   { label: "contact", href: "#contact" }
 ];
 
+const projectTypeOptions = [
+  "Full-stack application",
+  "Dashboard or internal tool",
+  "Website or landing page",
+  "Technical consultation"
+];
+
 const systemGroups = [
   {
     title: "Frontend & Product",
@@ -75,6 +82,8 @@ const fadeUp = {
 export default function Home() {
   const currentRole = portfolio.experience[0];
   const cleanPhoneNumber = portfolio.personal.contact.phone.replace(/\D/g, "");
+  const [projectType, setProjectType] = useState(projectTypeOptions[0]);
+  const [projectTypeOpen, setProjectTypeOpen] = useState(false);
 
   return (
     <main className="site-shell min-h-screen overflow-hidden text-zinc-200">
@@ -345,12 +354,37 @@ export default function Home() {
               </label>
               <label>
                 <span>Project type</span>
-                <select name="project_type" defaultValue="Full-stack application" required>
-                  <option>Full-stack application</option>
-                  <option>Dashboard or internal tool</option>
-                  <option>Website or landing page</option>
-                  <option>Technical consultation</option>
-                </select>
+                <input type="hidden" name="project_type" value={projectType} />
+                <div className="custom-select">
+                  <button
+                    type="button"
+                    aria-haspopup="listbox"
+                    aria-expanded={projectTypeOpen}
+                    onClick={() => setProjectTypeOpen((open) => !open)}
+                    onBlur={() => window.setTimeout(() => setProjectTypeOpen(false), 120)}
+                  >
+                    {projectType}
+                  </button>
+                  {projectTypeOpen ? (
+                    <div className="custom-select-menu" role="listbox" aria-label="Project type">
+                      {projectTypeOptions.map((option) => (
+                        <button
+                          key={option}
+                          type="button"
+                          role="option"
+                          aria-selected={projectType === option}
+                          onMouseDown={(event) => event.preventDefault()}
+                          onClick={() => {
+                            setProjectType(option);
+                            setProjectTypeOpen(false);
+                          }}
+                        >
+                          {option}
+                        </button>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
               </label>
               <label>
                 <span>Message</span>
