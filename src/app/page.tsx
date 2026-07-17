@@ -12,13 +12,6 @@ const navItems = [
   { label: "contact", href: "#contact" }
 ];
 
-const stats = [
-  { value: "3+", label: "years MERN" },
-  { value: "4", label: "developer roles" },
-  { value: "6", label: "production builds" },
-  { value: "2", label: "team lead roles" }
-];
-
 const systemGroups = [
   {
     title: "Frontend & Product",
@@ -141,14 +134,6 @@ export default function Home() {
             transition={{ delay: 0.18, duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
           >
             <InteractiveTerminal />
-            <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2">
-              {stats.map((item) => (
-                <div key={item.label} className="metric-card">
-                  <dt>{item.value}</dt>
-                  <dd>{item.label}</dd>
-                </div>
-              ))}
-            </dl>
             <div className="skill-strip">
               {["Next.js", "TypeScript", "Node.js", "MongoDB", "Express", "Docker", "AWS", "CI/CD"].map((skill) => (
                 <span key={skill}>{skill}</span>
