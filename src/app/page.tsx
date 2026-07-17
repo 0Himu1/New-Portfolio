@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Code2, Cpu, Mail, MessageCircle, MapPin, Phone, RadioTower, Send, Terminal } from "lucide-react";
+import { ArrowUpRight, Code2, Cpu, Download, Mail, MessageCircle, MapPin, Phone, RadioTower, Send, Terminal } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { capturePortfolioEvent } from "@/lib/analytics";
 
@@ -19,6 +19,8 @@ const projectTypeOptions = [
   "Website or landing page",
   "Technical consultation"
 ];
+
+const resumePath = "/Kamruzzaman%20Khondokar%20Resume.pdf";
 
 const systemGroups = [
   {
@@ -116,12 +118,14 @@ export default function Home() {
             ))}
           </nav>
           <a
-            aria-label="Email Kamruzzaman"
-            className="grid size-12 shrink-0 place-items-center rounded-full border border-zinc-800 bg-zinc-950/80 text-zinc-300 transition hover:border-emerald-400/50 hover:bg-emerald-400/10 hover:text-emerald-300"
-            href={`mailto:${portfolio.personal.contact.email}`}
-            onClick={() => capturePortfolioEvent("contact_link_clicked", { method: "email", location: "header" })}
+            aria-label="Download resume"
+            className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full border border-zinc-800 bg-zinc-950/80 px-4 font-semibold text-zinc-300 transition hover:border-emerald-400/50 hover:bg-emerald-400/10 hover:text-emerald-300"
+            href={resumePath}
+            download
+            onClick={() => capturePortfolioEvent("resume_download_clicked", { location: "header" })}
           >
-            <Mail size={18} />
+            <Download size={17} />
+            <span className="hidden sm:inline">Resume</span>
           </a>
         </header>
 
