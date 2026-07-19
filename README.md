@@ -1,6 +1,6 @@
-# Kamruzzaman Khondokar Portfolio
+# Kamruzzaman Khandakar Portfolio
 
-Interactive dark-mode portfolio for Kamruzzaman Khondokar, built as a game-like isometric apartment map. Each room represents a portfolio section, with clickable room zones, keyboard navigation, animated avatar movement, progress tracking, and drawer-based details powered by typed portfolio data.
+Interactive dark-mode portfolio for Kamruzzaman Khandakar, built as a game-like isometric apartment map. Each room represents a portfolio section, with clickable room zones, keyboard navigation, animated avatar movement, progress tracking, and drawer-based details powered by typed portfolio data.
 
 ## Tech Stack
 

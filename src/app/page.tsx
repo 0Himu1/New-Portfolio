@@ -20,7 +20,7 @@ const projectTypeOptions = [
   "Technical consultation"
 ];
 
-const resumePath = "/Kamruzzaman%20Khondokar%20Resume.pdf";
+const resumePath = "/Kamruzzaman%20Khandakar%20Resume.pdf";
 
 const systemGroups = [
   {
@@ -53,7 +53,7 @@ const featuredProjects = [
 
 const terminalCommandOutputs: Record<string, string[]> = {
   about: [
-    "Kamruzzaman Khondokar / Himu Nazmul",
+    "Kamruzzaman Khandakar",
     "Full-stack developer building MERN products, machine dashboards, and growth systems.",
     "Current focus: remote-friendly mid-level full-stack roles."
   ],
@@ -63,7 +63,7 @@ const terminalCommandOutputs: Record<string, string[]> = {
   projects: featuredProjects.map((project) => `${project.name} - ${project.tags.slice(0, 3).join(", ")}`),
   contact: [`email: ${portfolio.personal.contact.email}`, `phone: ${portfolio.personal.contact.phone}`, "location: Tejgaon / Gazipur, Bangladesh"],
   resume: [
-    "Kamruzzaman Khondokar - Full-stack developer",
+    "Kamruzzaman Khandakar - Full-stack developer",
     "3 years MERN experience; React, Next.js, Node.js, MongoDB, Docker, AWS.",
     "Open to mid-level product-minded full-stack roles."
   ]
@@ -97,7 +97,7 @@ export default function Home() {
           <a
             href="#top"
             className="group grid size-12 shrink-0 place-items-center rounded-full border border-emerald-400/20 bg-zinc-950 text-emerald-300 transition hover:border-emerald-300/50 hover:bg-emerald-400/10"
-            aria-label="Himu Nazmul home"
+            aria-label="Kamruzzaman Khandakar home"
             onClick={() => capturePortfolioEvent("nav_link_clicked", { label: "brand_mark", target: "#top" })}
           >
             <span className="relative grid size-8 place-items-center rounded-xl border border-zinc-800 bg-zinc-900/90">
@@ -136,9 +136,9 @@ export default function Home() {
               available for mid-level full-stack roles
             </div>
 
-            <h1 className="hero-title mt-9 font-semibold leading-[0.86] tracking-[-0.065em] text-zinc-100">
-              Himu
-              <span className="block">Nazmul</span>
+            <h1 className="hero-title mt-9 font-semibold leading-[0.9] tracking-[-0.055em] text-zinc-100">
+              Kamruzzaman
+              <span className="block">Khandakar</span>
             </h1>
 
             <p className="mt-8 max-w-3xl border-l border-emerald-400/40 pl-4 text-base leading-8 text-zinc-500 sm:text-lg">
@@ -403,7 +403,7 @@ export default function Home() {
         </SectionShell>
 
         <footer className="flex flex-col gap-4 border-t border-zinc-900 py-10 text-[12px] text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Kamruzzaman Khondokar</p>
+          <p>© 2026 Kamruzzaman Khandakar</p>
           <p className="flex items-center gap-2">
             <Terminal size={14} />
             full-stack developer / systems thinker

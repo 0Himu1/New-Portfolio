@@ -60,7 +60,7 @@ a:focus-visible {
 }
 
 .hero-title {
-  font-size: clamp(5.5rem, 13vw, 15.6rem);
+  font-size: clamp(4.1rem, 8.8vw, 10.8rem);
 }
 
 .hero-side {
@@ -746,7 +746,7 @@ a:focus-visible {
   }
 
   .hero-title {
-    font-size: clamp(4.7rem, 21vw, 7rem);
+    font-size: clamp(3.15rem, 13.7vw, 5.35rem);
   }
 
   .terminal-body {

@@ -2,8 +2,8 @@ import type { PortfolioData } from "@/types/portfolio";
 
 export const portfolio: PortfolioData = {
   personal: {
-    name: "Kamruzzaman Khondokar",
-    aliases: ["Supto Kumar Bala", "Himu Nazmul"],
+    name: "Kamruzzaman Khandakar",
+    aliases: ["Supto Kumar Bala"],
     title: "Full-Stack Developer",
     tagline:
       "Full-stack developer who partners with founders to translate business goals into scalable technical solutions - not just write code.",

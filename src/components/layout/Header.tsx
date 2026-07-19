@@ -10,7 +10,7 @@ export function Header({ personal }: HeaderProps) {
 
   return (
     <header className="glass-panel flex items-center justify-between gap-4 rounded-xl px-4 py-3">
-      <a href="#top" className="flex min-w-0 items-center gap-3" aria-label="Kamruzzaman Khondokar home">
+      <a href="#top" className="flex min-w-0 items-center gap-3" aria-label="Kamruzzaman Khandakar home">
         <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-cyan-glow/35 bg-cyan-glow/10 text-lg font-black text-cyan-glow shadow-neon">
           K
         </span>
