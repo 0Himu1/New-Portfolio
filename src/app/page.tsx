@@ -131,12 +131,7 @@ export default function Home() {
 
         <section id="top" className="hero-grid min-h-[calc(100vh-5rem)] py-16 lg:py-24">
           <motion.div initial={false} animate="visible" variants={fadeUp} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}>
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/10 bg-emerald-400/[0.04] px-3 py-1 text-[12px] text-emerald-300/80">
-              <span className="size-1.5 rounded-full bg-emerald-300 shadow-[0_0_18px_rgba(110,231,183,0.9)]" />
-              available for mid-level full-stack roles
-            </div>
-
-            <h1 className="hero-title mt-9 font-semibold leading-[0.9] tracking-[-0.055em] text-zinc-100">
+            <h1 className="hero-title font-semibold leading-[0.9] tracking-[-0.055em] text-zinc-100">
               Kamruzzaman
               <span className="block">Khandakar</span>
             </h1>

@@ -60,7 +60,8 @@ a:focus-visible {
 }
 
 .hero-title {
-  font-size: clamp(4.1rem, 8.8vw, 10.8rem);
+  max-width: 9.6ch;
+  font-size: clamp(3.35rem, 6.4vw, 7.9rem);
 }
 
 .hero-side {
@@ -746,7 +747,7 @@ a:focus-visible {
   }
 
   .hero-title {
-    font-size: clamp(3.15rem, 13.7vw, 5.35rem);
+    font-size: clamp(2.85rem, 12.3vw, 4.75rem);
   }
 
   .terminal-body {
